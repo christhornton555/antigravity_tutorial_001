@@ -1,3 +1,4 @@
+import Image from "next/image";
 import FlightSearch from "./components/FlightSearch";
 
 export default function Home() {
@@ -11,7 +12,16 @@ export default function Home() {
       </div>
 
       <div className="z-10 w-full max-w-4xl flex flex-col items-center gap-8">
-        <div className="text-center space-y-2">
+        <div className="flex flex-col items-center text-center space-y-4">
+          <div className="relative w-32 h-32 md:w-40 md:h-40">
+            <Image
+              src="/logo.png"
+              alt="SkyTrack Logo"
+              fill
+              className="object-contain drop-shadow-[0_0_15px_rgba(168,85,247,0.5)]"
+              priority
+            />
+          </div>
           <h1 className="text-4xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-sky-300 via-white to-purple-300 tracking-tight">
             SkyTrack
           </h1>
